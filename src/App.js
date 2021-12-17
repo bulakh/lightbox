@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
 function App() {
+  const colors = ['green', 'black', 'yellow', 'grey', 'blue', 'tomato', 'plum', 'orange', 'purple', 'wheat'];
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Images</h1>
+      <ul style={{listStyle: 'none', padding: '0', display: 'flex', gap: '19px', flexWrap: 'wrap'}}>
+        {colors.map(color => (
+          <li key={color} style={{height: '137px', width: '137px', background: color, borderRadius: '5px'}}></li>
+        ))}
+      </ul>
+      <section>
+
+      </section>
+    </>
   );
 }
 
