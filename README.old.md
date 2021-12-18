@@ -1,2 +1,0 @@
-# lightbox
-## test task
