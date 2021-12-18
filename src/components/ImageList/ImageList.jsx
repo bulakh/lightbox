@@ -18,16 +18,17 @@ function ImageList({
 
   return (
     <>
-      {allImages.length !== 0
-      && <ul className={styles.imageList}>
-        {allImages.map(dataImage => (
-          <ImageItem
-            key={dataImage.id}
-            clickHandler={clickHandler}
-            dataImage={dataImage}
-          />
-        ))}
-      </ul>}
+      {allImages.length !== 0 &&
+        <ul className={styles.imageList}>
+          {allImages.map(dataImage => (
+            <ImageItem
+              key={dataImage.id}
+              clickHandler={clickHandler}
+              dataImage={dataImage}
+            />
+          ))}
+        </ul>
+      }
     </>
   )
 }

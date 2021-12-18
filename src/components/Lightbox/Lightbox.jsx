@@ -18,7 +18,7 @@ function Lightbox({image, allImages, setImage, setDefaultState}) {
   return (
     <>
       <div className={styles.lightbox}>
-        <img style={{height: '100%'}} src={useGetHalfImage(image.download_url)} alt={image.author} />
+        <img src={useGetHalfImage(image.download_url)} alt={image.author} />
       </div>
       <div className={styles.wrap}>
         <ArrowButton navImage={navImage} name={'prev'} getDisabled={getDisabledFirst(allImages, image)}/>
