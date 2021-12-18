@@ -15,6 +15,6 @@ export const useGetImages = (url, setIsLoaded, setImages) => {
           alert('Ошибка:', error);
         }
       )
-  },  [])
+  },  [url, setIsLoaded, setImages])
 
 }
