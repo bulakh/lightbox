@@ -15,5 +15,5 @@ export const useClosePopup = (setPopup, setDefaultState) => {
     return () => {
       document.removeEventListener("keydown", closeLightboxKeyHandler, false);
     };
-  }, []);
+  });
 }
