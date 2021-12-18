@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+.popup {
+  position: absolute;
+  top: 0; width: 100%;
+  min-height: 100%;
+  background: $fade;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  background: $bg;
+  margin-top: 65px;
+  width: 70vw;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px
+}
+
+.wrapUi {
+
+}

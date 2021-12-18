@@ -1,0 +1,13 @@
+@import '../../variables.scss';
+
+.imageItem {
+  height: 137px;
+  width: 137px;
+  overflow: hidden;
+  background: $default;
+  border-radius: 5px;
+
+  & img {
+    height: 100%;
+  }
+}
