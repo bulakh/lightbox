@@ -10,18 +10,29 @@
   justify-content: center;
 }
 
+.close {
+  position: absolute;
+  top: 84px;
+  right: 16%;
+}
+
 .wrap {
-  background: $bg;
-  margin-top: 65px;
-  width: 70vw;
-  min-height: 92vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px
+  flex-direction: column;
+
+  width: 70vw;
+  min-height: 92vh;
+  padding: 60px;
+  margin-top: 65px;
+
+  background: $bg;
+  border-radius: 15px 15px 0 0;
 }
 
 .wrapUi {
+  display: flex;
+  gap: 50px;
 
 }

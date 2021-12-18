@@ -2,10 +2,14 @@
 
 .imageItem {
   height: 137px;
-  width: 137px;
   overflow: hidden;
   background: $default;
   border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 8px 0px $shadow;
+  }
 
   & img {
     height: 100%;

@@ -25,7 +25,10 @@ function Form({comment, comments, setComment, setComments}) {
   }
 
   return (
-    <form onSubmit={leaveCommentHandler} >
+    <form
+      className={styles.form}
+      onSubmit={leaveCommentHandler}
+    >
 
       <TextArea
         changeHandler={changeHandler}

@@ -1,4 +1,14 @@
+@import '../../../variables.scss';
+
 .area {
   width: 500px;
   height: 130px;
+  margin-bottom: 15px;
+
+  background-color: $transparent;
+  border-radius: 5px;
+
+  font-family: $fontDefault;
+  font-weight: 600;
+  font-size: 18px;
 }

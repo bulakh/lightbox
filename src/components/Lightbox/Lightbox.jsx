@@ -1,5 +1,7 @@
 import React from "react";
 import { useGetHalfImage } from "../../hooks/useGetHalfImage";
+import { getDisabledFirst, getDisabledLast } from "../../utils";
+import ArrowButton from "../UI/ArrowButton/ArrowButton";
 import styles from './Lightbox.module.scss'
 
 function Lightbox({image, allImages, setImage, setDefaultState}) {
@@ -15,23 +17,14 @@ function Lightbox({image, allImages, setImage, setDefaultState}) {
 
   return (
     <>
-      <div style={{width: '90%', height: '515px', backgroundImg: 'lightgrey', overflow: 'hidden'}}>
-        <img style={{height: '100%'}} src={useGetHalfImage(image.download_url)} alt={'text!!!!!'} />
+      <div className={styles.lightbox}>
+        <img style={{height: '100%'}} src={useGetHalfImage(image.download_url)} alt={image.author} />
       </div>
-      <button
-        onClick={navImage}
-        data-name='prev'
-        disabled={allImages.indexOf(image) === 0 ? 'disabled' : false}
-      >
-        Prev
-      </button>
-      <button
-        onClick={navImage}
-        data-name='next'
-        disabled={allImages.indexOf(image) === allImages.length - 1 ? 'disabled' : false}
-      >
-        Next
-      </button>
+      <div className={styles.wrap}>
+        <ArrowButton navImage={navImage} name={'prev'} getDisabled={getDisabledFirst(allImages, image)}/>
+        <ArrowButton navImage={navImage} name={'next'} getDisabled={getDisabledLast(allImages, image)} />
+      </div>
+
     </>
   )
 }

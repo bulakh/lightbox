@@ -45,7 +45,7 @@ function Popup({
       >
         <h2 className='visually-hidden'>Lightbox</h2>
 
-        <CloseButton />
+        <CloseButton position={styles.close} />
 
         <div className={styles.wrap}>
           <Lightbox
@@ -58,14 +58,16 @@ function Popup({
           <div className={styles.wrapUi}>
             <LikeButton like={like}  setLike={setLike}/>
 
-            <CommentList comments={comments}/>
+            <div>
+              <CommentList comments={comments}/>
 
-            <Form
-              comment={comment}
-              comments={comments}
-              setComment={setComment}
-              setComments={setComments}
-            />
+              <Form
+                comment={comment}
+                comments={comments}
+                setComment={setComment}
+                setComments={setComments}
+              />
+            </div>
           </div>
         </div>
       </section>}

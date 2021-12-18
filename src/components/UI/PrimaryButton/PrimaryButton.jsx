@@ -3,7 +3,11 @@ import styles from './PrimaryButton.module.scss'
 
 function PrimaryButton({type, comment, children}) {
   return (
-    <button type={type} disabled={comment.text ? false : 'disabled'}>
+    <button
+      className={styles.button}
+      type={type}
+      disabled={comment.text ? false : 'disabled'}
+    >
       {children}
     </button>
   )

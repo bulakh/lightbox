@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.wrapItem {
+  display: flex;
+  align-items: start;
+  gap: 30px;
+
+  margin-bottom: 20px;
+
+  & h4 {
+    margin: 0;
+  }
+}
+
+.avatar {
+  background: $default;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%
+}

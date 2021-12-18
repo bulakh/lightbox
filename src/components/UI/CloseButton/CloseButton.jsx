@@ -1,10 +1,12 @@
 import React from "react";
+import cn from "classnames";
 import styles from './CloseButton.module.scss'
 
-function CloseButton() {
+
+function CloseButton({position}) {
 
   return (
-    <button className={styles.cross} data-name='close' />
+    <button className={cn(styles.cross, position)} data-name='close' />
   )
 }
 
